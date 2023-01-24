@@ -1,0 +1,23 @@
+{
+  "name": "open-runtimes-executor-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meldiron/open-runtimes-executor-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Meldiron/open-runtimes-executor-example/issues"
+  },
+  "homepage": "https://github.com/Meldiron/open-runtimes-executor-example#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.8"
+  }
+}

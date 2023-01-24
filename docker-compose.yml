@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  openruntimes-executor:
+    container_name: openruntimes-executor
+    stop_signal: SIGINT
+    image: openruntimes/executor:0.2.0
+    ports:
+      - 8080:80
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /tmp:/tmp:rw
+      - ./code:/code:rw
+    environment:
+      - OPR_EXECUTOR_CONNECTION_STORAGE=local://localhost
+      - OPR_EXECUTOR_SECRET=my-secret
