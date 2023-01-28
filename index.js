@@ -1,8 +1,6 @@
 const fetch = require('node-fetch');
 const fs = require("fs");
 
-// . 
-
 const executeCode = async (code, { input, output }) => {
     const executionId = `e_${Date.now()}`;
 
