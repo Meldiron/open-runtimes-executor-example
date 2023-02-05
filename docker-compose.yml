@@ -1,12 +1,17 @@
 version: '3'
 
 services:
-  openruntimes-executor:
-    container_name: openruntimes-executor
+  runtimes-api:
+    build: .
+    command: npm start
+    volumes:
+      - ./code:/usr/app/code:rw
+    ports:
+      - "3000:3000"
+  runtimes-executor:
+    container_name: runtimes-executor
     stop_signal: SIGINT
     image: openruntimes/executor:0.2.0
-    ports:
-      - 8080:80
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /tmp:/tmp:rw

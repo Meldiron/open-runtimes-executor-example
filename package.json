@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "micro"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/Meldiron/open-runtimes-executor-example#readme",
   "dependencies": {
+    "micro": "^10.0.1",
     "node-fetch": "^2.6.8"
   }
 }
