@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Meldiron/open-runtimes-executor-example#readme",
   "dependencies": {
     "micro": "^10.0.1",
+    "micro-cors": "^0.1.1",
     "node-fetch": "^2.6.8"
   }
 }

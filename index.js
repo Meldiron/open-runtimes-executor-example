@@ -1,6 +1,7 @@
 const fetch = require('node-fetch');
 const fs = require("fs");
 const {json} = require('micro');
+const cors = require('micro-cors')();
 
 const executeCode = async (code, { input }) => {
     const executionId = `e_${Date.now()}`;
@@ -46,7 +47,7 @@ const executeCode = async (code, { input }) => {
     }
 }
 
-module.exports = async (req, res) => {
+const handler = async (req, res) =>  {
     const data = await json(req);
 
     const code = data.code;
@@ -62,3 +63,5 @@ module.exports = async (req, res) => {
 
     res.end(JSON.stringify(response));
 };
+
+module.exports = cors(handler);
