@@ -48,6 +48,11 @@ const executeCode = async (code, { input }) => {
 }
 
 const handler = async (req, res) =>  {
+    if(req.method !== 'POST') {
+        res.end('OK');
+        return;
+    }
+    
     const data = await json(req);
 
     const code = data.code;
